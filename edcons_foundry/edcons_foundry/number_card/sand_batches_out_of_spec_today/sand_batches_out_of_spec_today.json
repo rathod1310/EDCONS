@@ -1,0 +1,22 @@
+{
+ "aggregate_function_based_on": "out_of_spec_count",
+ "creation": "2026-11-26 18:00:00.000000",
+ "docstatus": 0,
+ "doctype": "Number Card",
+ "document_type": "Sand Mix Log",
+ "dynamic_filters_json": "[]",
+ "filters_json": "[[\"Sand Mix Log\", \"docstatus\", \"<\", \"2\", false], [\"Sand Mix Log\", \"posting_date\", \"Timespan\", \"today\", false]]",
+ "function": "Sum",
+ "idx": 0,
+ "is_public": 1,
+ "is_standard": 1,
+ "label": "Sand Batches Out of Spec Today",
+ "modified": "2026-11-26 18:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Edcons Foundry",
+ "name": "Sand Batches Out of Spec Today",
+ "owner": "Administrator",
+ "show_percentage_stats": 1,
+ "stats_time_interval": "Daily",
+ "type": "Document Type"
+}

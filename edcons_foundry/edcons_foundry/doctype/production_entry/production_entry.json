@@ -1,0 +1,295 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "creation": "2026-11-26 18:00:00.000000",
+ "modified": "2026-11-26 18:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "posting_date",
+  "shift",
+  "cb1",
+  "melt_type",
+  "contractor",
+  "cb2",
+  "supervisor",
+  "tapping_temp",
+  "items_section",
+  "items",
+  "pour_section",
+  "pouring",
+  "totals_section",
+  "total_nos",
+  "total_weight_kg",
+  "cb3",
+  "total_rejected_nos",
+  "total_good_nos",
+  "cb4",
+  "return_metal_kg",
+  "uncast_kg",
+  "heats",
+  "remarks",
+  "automation_section",
+  "erp_posting_status",
+  "return_metal_entry",
+  "rejection_report",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "PE-.YY.-.MM.-.####",
+   "default": "PE-.YY.-.MM.-.####",
+   "reqd": 1,
+   "print_hide": 1
+  },
+  {
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Date",
+   "default": "Today",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "shift",
+   "fieldtype": "Select",
+   "label": "Shift",
+   "options": "Day\nNight",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "cb1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "melt_type",
+   "fieldtype": "Select",
+   "label": "Melt Type",
+   "options": "DI\nCI",
+   "default": "DI",
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "contractor",
+   "fieldtype": "Link",
+   "label": "Contractor",
+   "options": "Supplier"
+  },
+  {
+   "fieldname": "cb2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "supervisor",
+   "fieldtype": "Link",
+   "label": "Supervisor",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "tapping_temp",
+   "fieldtype": "Data",
+   "label": "Tapping / Last Temp"
+  },
+  {
+   "fieldname": "items_section",
+   "fieldtype": "Section Break",
+   "label": "Moulding and Casting (PR 1 / CI 2)",
+   "description": "One row per moulder, item and heat. Book weight, pattern and grade fill from the Item."
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Castings",
+   "options": "Production Entry Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "pour_section",
+   "fieldtype": "Section Break",
+   "label": "Pouring Velocity (PR 4)",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "pouring",
+   "fieldtype": "Table",
+   "label": "Pouring Records",
+   "options": "Pouring Record"
+  },
+  {
+   "fieldname": "totals_section",
+   "fieldtype": "Section Break",
+   "label": "Totals"
+  },
+  {
+   "fieldname": "total_nos",
+   "fieldtype": "Int",
+   "label": "Total Pcs",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "total_weight_kg",
+   "fieldtype": "Float",
+   "label": "Total Kgs",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "cb3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_rejected_nos",
+   "fieldtype": "Int",
+   "label": "Rejected Pcs",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_good_nos",
+   "fieldtype": "Int",
+   "label": "Good Pcs",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "return_metal_kg",
+   "fieldtype": "Float",
+   "label": "Return Metal (kg)",
+   "description": "Runners and risers back to the yard"
+  },
+  {
+   "fieldname": "uncast_kg",
+   "fieldtype": "Float",
+   "label": "Un-cast Metal (kg)"
+  },
+  {
+   "fieldname": "heats",
+   "fieldtype": "Small Text",
+   "label": "Heats Used",
+   "read_only": 1
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "automation_section",
+   "fieldtype": "Section Break",
+   "label": "ERP Posting (automatic)",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "erp_posting_status",
+   "fieldtype": "Small Text",
+   "label": "Posting Status",
+   "read_only": 1,
+   "no_copy": 1,
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "return_metal_entry",
+   "fieldtype": "Link",
+   "label": "Return Metal Entry",
+   "options": "Stock Entry",
+   "read_only": 1,
+   "no_copy": 1,
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "rejection_report",
+   "fieldtype": "Link",
+   "label": "Rejection Report",
+   "options": "Rejection Report",
+   "read_only": 1,
+   "no_copy": 1,
+   "allow_on_submit": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "options": "Production Entry",
+   "read_only": 1,
+   "no_copy": 1,
+   "print_hide": 1
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "links": [],
+ "module": "Edcons Foundry",
+ "modified_by": "Administrator",
+ "name": "Production Entry",
+ "owner": "Administrator",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "export": 1,
+   "email": 1,
+   "share": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1
+  },
+  {
+   "role": "Foundry Supervisor",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "export": 1,
+   "email": 1,
+   "share": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1
+  },
+  {
+   "role": "Foundry Operator",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "write": 1,
+   "create": 1,
+   "email": 1
+  },
+  {
+   "role": "Quality Manager",
+   "read": 1,
+   "report": 1,
+   "print": 1
+  },
+  {
+   "role": "Plant Head",
+   "read": 1,
+   "report": 1,
+   "print": 1
+  }
+ ],
+ "is_submittable": 1,
+ "autoname": "naming_series:",
+ "naming_rule": "By \"Naming Series\" field",
+ "search_fields": "posting_date,shift,melt_type"
+}

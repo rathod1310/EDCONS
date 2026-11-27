@@ -1,0 +1,108 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-11-26 18:00:00.000000",
+ "modified": "2026-11-26 18:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "heat",
+  "item_code",
+  "pouring_time_sec",
+  "book_weight",
+  "good_casting_wt",
+  "pouring_velocity",
+  "ladle_no",
+  "pouring_method",
+  "pour_type",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "heat",
+   "fieldtype": "Link",
+   "label": "Heat No.",
+   "options": "Furnace Heat",
+   "in_list_view": 1,
+   "columns": 2
+  },
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "label": "Item",
+   "options": "Item",
+   "in_list_view": 1,
+   "columns": 2
+  },
+  {
+   "fieldname": "pouring_time_sec",
+   "fieldtype": "Float",
+   "label": "Pouring Time (sec)",
+   "in_list_view": 1,
+   "columns": 1
+  },
+  {
+   "fieldname": "book_weight",
+   "fieldtype": "Float",
+   "label": "B/Wt (kg)",
+   "fetch_from": "item_code.casting_book_weight",
+   "fetch_if_empty": 1,
+   "in_list_view": 1,
+   "columns": 1
+  },
+  {
+   "fieldname": "good_casting_wt",
+   "fieldtype": "Float",
+   "label": "Good Casting Wt (kg)",
+   "in_list_view": 1,
+   "columns": 1
+  },
+  {
+   "fieldname": "pouring_velocity",
+   "fieldtype": "Float",
+   "label": "Velocity (kg/sec)",
+   "read_only": 1,
+   "in_list_view": 1,
+   "columns": 1
+  },
+  {
+   "fieldname": "ladle_no",
+   "fieldtype": "Data",
+   "label": "Pouring Dabu / Ladle"
+  },
+  {
+   "fieldname": "pouring_method",
+   "fieldtype": "Select",
+   "label": "Hand / Crane",
+   "options": "Hand\nCrane",
+   "in_list_view": 1,
+   "columns": 1
+  },
+  {
+   "fieldname": "pour_type",
+   "fieldtype": "Select",
+   "label": "SP / DP",
+   "options": "SP\nDP",
+   "in_list_view": 1,
+   "columns": 1
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Data",
+   "label": "Remarks"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "links": [],
+ "module": "Edcons Foundry",
+ "modified_by": "Administrator",
+ "name": "Pouring Record",
+ "owner": "Administrator",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 0,
+ "istable": 1,
+ "editable_grid": 1,
+ "permissions": []
+}

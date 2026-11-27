@@ -1,0 +1,53 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-11-26 18:00:00.000000",
+ "modified": "2026-11-26 18:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "operation",
+  "posted_from",
+  "qty_basis"
+ ],
+ "fields": [
+  {
+   "fieldname": "operation",
+   "fieldtype": "Link",
+   "label": "Operation",
+   "options": "Operation",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "posted_from",
+   "fieldtype": "Select",
+   "label": "Posted From",
+   "options": "Production Entry\nShot Blast Log\nFinishing Log\nVisual Inspection",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "qty_basis",
+   "fieldtype": "Select",
+   "label": "Quantity",
+   "options": "Total\nGood",
+   "default": "Total",
+   "in_list_view": 1,
+   "description": "Total = pieces processed, Good = pieces processed minus rejected"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "links": [],
+ "module": "Edcons Foundry",
+ "modified_by": "Administrator",
+ "name": "Foundry Operation Map",
+ "owner": "Administrator",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 0,
+ "istable": 1,
+ "editable_grid": 1,
+ "permissions": []
+}

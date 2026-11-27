@@ -1,0 +1,128 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-11-26 18:00:00.000000",
+ "modified": "2026-11-26 18:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "item_code",
+  "item_name",
+  "heat",
+  "material",
+  "standard",
+  "required_load_kn",
+  "applied_load_kn",
+  "block_dia_mm",
+  "duration_sec",
+  "permanent_set_mm",
+  "allowed_set_mm",
+  "result",
+  "observation"
+ ],
+ "fields": [
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "label": "Item",
+   "options": "Item",
+   "reqd": 1,
+   "in_list_view": 1,
+   "columns": 2
+  },
+  {
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "label": "Item Name",
+   "fetch_from": "item_code.item_name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "heat",
+   "fieldtype": "Link",
+   "label": "Heat No.",
+   "options": "Furnace Heat",
+   "in_list_view": 1,
+   "columns": 1
+  },
+  {
+   "fieldname": "material",
+   "fieldtype": "Data",
+   "label": "Material",
+   "fetch_from": "item_code.casting_grade",
+   "fetch_if_empty": 1
+  },
+  {
+   "fieldname": "standard",
+   "fieldtype": "Data",
+   "label": "Standard",
+   "in_list_view": 1,
+   "columns": 1,
+   "description": "e.g. EN 124 D400"
+  },
+  {
+   "fieldname": "required_load_kn",
+   "fieldtype": "Float",
+   "label": "Required Load (kN)",
+   "in_list_view": 1,
+   "columns": 1
+  },
+  {
+   "fieldname": "applied_load_kn",
+   "fieldtype": "Float",
+   "label": "Applied Load (kN)",
+   "in_list_view": 1,
+   "columns": 1
+  },
+  {
+   "fieldname": "block_dia_mm",
+   "fieldtype": "Float",
+   "label": "Block Dia (mm)"
+  },
+  {
+   "fieldname": "duration_sec",
+   "fieldtype": "Float",
+   "label": "Duration of Load (sec)"
+  },
+  {
+   "fieldname": "permanent_set_mm",
+   "fieldtype": "Float",
+   "label": "Permanent Set (mm)"
+  },
+  {
+   "fieldname": "allowed_set_mm",
+   "fieldtype": "Float",
+   "label": "Allowed Set (mm)",
+   "description": "0 = not checked"
+  },
+  {
+   "fieldname": "result",
+   "fieldtype": "Select",
+   "label": "Result",
+   "options": "\nPass\nFail",
+   "read_only": 1,
+   "in_list_view": 1,
+   "columns": 1
+  },
+  {
+   "fieldname": "observation",
+   "fieldtype": "Data",
+   "label": "Observation",
+   "in_list_view": 1,
+   "columns": 2
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "links": [],
+ "module": "Edcons Foundry",
+ "modified_by": "Administrator",
+ "name": "Load Test Item",
+ "owner": "Administrator",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 0,
+ "istable": 1,
+ "editable_grid": 1,
+ "permissions": []
+}

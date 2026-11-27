@@ -1,0 +1,202 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-11-26 18:00:00.000000",
+ "modified": "2026-11-26 18:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "stock_section",
+  "rm_warehouse",
+  "scrap_warehouse",
+  "cb1",
+  "return_metal_item",
+  "automation_section",
+  "auto_post_job_cards",
+  "submit_completed_job_cards",
+  "auto_rejection_report",
+  "draft_manufacture_entry",
+  "cb2",
+  "post_heat_charge",
+  "post_return_metal",
+  "post_rejection_to_scrap",
+  "ops_section",
+  "operation_map",
+  "limits_section",
+  "weight_tolerance_pct",
+  "cb3",
+  "kwh_target",
+  "sand_section",
+  "sand_limits"
+ ],
+ "fields": [
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "stock_section",
+   "fieldtype": "Section Break",
+   "label": "Stock"
+  },
+  {
+   "fieldname": "rm_warehouse",
+   "fieldtype": "Link",
+   "label": "Raw Material / Charge Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "scrap_warehouse",
+   "fieldtype": "Link",
+   "label": "Return Metal Yard",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "cb1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "return_metal_item",
+   "fieldtype": "Link",
+   "label": "Return Metal Item",
+   "options": "Item",
+   "description": "Item used for runners, risers and rejected castings going back to the furnace"
+  },
+  {
+   "fieldname": "automation_section",
+   "fieldtype": "Section Break",
+   "label": "Automation"
+  },
+  {
+   "fieldname": "auto_post_job_cards",
+   "fieldtype": "Check",
+   "label": "Update Job Cards from shop-floor logs",
+   "default": "1"
+  },
+  {
+   "fieldname": "submit_completed_job_cards",
+   "fieldtype": "Check",
+   "label": "Submit Job Card when its quantity is complete",
+   "default": "1"
+  },
+  {
+   "fieldname": "auto_rejection_report",
+   "fieldtype": "Check",
+   "label": "Create draft Rejection Report for rejected pieces",
+   "default": "1"
+  },
+  {
+   "fieldname": "draft_manufacture_entry",
+   "fieldtype": "Check",
+   "label": "Create draft Manufacture entry for pieces passed in Visual Inspection",
+   "default": "1"
+  },
+  {
+   "fieldname": "cb2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "post_heat_charge",
+   "fieldtype": "Check",
+   "label": "Issue the heat charge from stock on Heat submit",
+   "default": "0"
+  },
+  {
+   "fieldname": "post_return_metal",
+   "fieldtype": "Check",
+   "label": "Receive return metal (runners/risers) from Production Entry",
+   "default": "0"
+  },
+  {
+   "fieldname": "post_rejection_to_scrap",
+   "fieldtype": "Check",
+   "label": "Receive rejected castings into Return Metal Yard",
+   "default": "0"
+  },
+  {
+   "fieldname": "ops_section",
+   "fieldtype": "Section Break",
+   "label": "Job Card operations",
+   "description": "Which shop-floor log completes which BOM operation. Operations must match the BOM routing."
+  },
+  {
+   "fieldname": "operation_map",
+   "fieldtype": "Table",
+   "label": "Operation Map",
+   "options": "Foundry Operation Map"
+  },
+  {
+   "fieldname": "limits_section",
+   "fieldtype": "Section Break",
+   "label": "Limits"
+  },
+  {
+   "fieldname": "weight_tolerance_pct",
+   "fieldtype": "Float",
+   "label": "Casting Weight Tolerance (%)",
+   "default": "3"
+  },
+  {
+   "fieldname": "cb3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "kwh_target",
+   "fieldtype": "Float",
+   "label": "Target kWh per Tonne",
+   "default": "630"
+  },
+  {
+   "fieldname": "sand_section",
+   "fieldtype": "Section Break",
+   "label": "Sand Specification (PR 46)",
+   "description": "PR 46 and PR 32 print different limits; confirm which governs"
+  },
+  {
+   "fieldname": "sand_limits",
+   "fieldtype": "Table",
+   "label": "Sand Limits",
+   "options": "Sand Spec Limit"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "links": [],
+ "module": "Edcons Foundry",
+ "modified_by": "Administrator",
+ "name": "Foundry Settings",
+ "owner": "Administrator",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "export": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Plant Head",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "export": 1,
+   "email": 1,
+   "share": 1
+  }
+ ],
+ "issingle": 1
+}

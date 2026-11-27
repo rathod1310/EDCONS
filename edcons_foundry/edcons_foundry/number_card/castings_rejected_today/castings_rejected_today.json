@@ -1,0 +1,22 @@
+{
+ "aggregate_function_based_on": "total_nos",
+ "creation": "2026-11-26 18:00:00.000000",
+ "docstatus": 0,
+ "doctype": "Number Card",
+ "document_type": "Rejection Report",
+ "dynamic_filters_json": "[]",
+ "filters_json": "[[\"Rejection Report\", \"docstatus\", \"=\", \"1\", false], [\"Rejection Report\", \"posting_date\", \"Timespan\", \"today\", false]]",
+ "function": "Sum",
+ "idx": 0,
+ "is_public": 1,
+ "is_standard": 1,
+ "label": "Castings Rejected Today",
+ "modified": "2026-11-26 18:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Edcons Foundry",
+ "name": "Castings Rejected Today",
+ "owner": "Administrator",
+ "show_percentage_stats": 1,
+ "stats_time_interval": "Daily",
+ "type": "Document Type"
+}

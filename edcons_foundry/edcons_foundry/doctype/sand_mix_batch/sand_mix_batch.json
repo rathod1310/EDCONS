@@ -1,0 +1,142 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-11-26 18:00:00.000000",
+ "modified": "2026-11-26 18:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "batch_no",
+  "batch_time",
+  "bentonite_kg",
+  "coal_dust_kg",
+  "new_sand_kg",
+  "used_sand_kg",
+  "dry_mix_sec",
+  "wet_mix_sec",
+  "moisture_pct",
+  "compactability_pct",
+  "gcs",
+  "permeability",
+  "mould_hardness",
+  "result",
+  "out_of_spec",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "batch_no",
+   "fieldtype": "Data",
+   "label": "Batch No.",
+   "in_list_view": 1,
+   "columns": 1
+  },
+  {
+   "fieldname": "batch_time",
+   "fieldtype": "Time",
+   "label": "Time",
+   "in_list_view": 1,
+   "columns": 1
+  },
+  {
+   "fieldname": "bentonite_kg",
+   "fieldtype": "Float",
+   "label": "Bentonite (kg)"
+  },
+  {
+   "fieldname": "coal_dust_kg",
+   "fieldtype": "Float",
+   "label": "Coal Dust (kg)"
+  },
+  {
+   "fieldname": "new_sand_kg",
+   "fieldtype": "Float",
+   "label": "New Sand (kg)"
+  },
+  {
+   "fieldname": "used_sand_kg",
+   "fieldtype": "Float",
+   "label": "Used Sand (kg)"
+  },
+  {
+   "fieldname": "dry_mix_sec",
+   "fieldtype": "Float",
+   "label": "Dry Mixing (sec)"
+  },
+  {
+   "fieldname": "wet_mix_sec",
+   "fieldtype": "Float",
+   "label": "Wet Mixing (sec)"
+  },
+  {
+   "fieldname": "moisture_pct",
+   "fieldtype": "Float",
+   "label": "Moisture %",
+   "in_list_view": 1,
+   "columns": 1
+  },
+  {
+   "fieldname": "compactability_pct",
+   "fieldtype": "Float",
+   "label": "Compactability %",
+   "in_list_view": 1,
+   "columns": 1
+  },
+  {
+   "fieldname": "gcs",
+   "fieldtype": "Float",
+   "label": "Green Compressive Strength",
+   "in_list_view": 1,
+   "columns": 1
+  },
+  {
+   "fieldname": "permeability",
+   "fieldtype": "Float",
+   "label": "Permeability",
+   "in_list_view": 1,
+   "columns": 1
+  },
+  {
+   "fieldname": "mould_hardness",
+   "fieldtype": "Float",
+   "label": "Mould Hardness",
+   "in_list_view": 1,
+   "columns": 1
+  },
+  {
+   "fieldname": "result",
+   "fieldtype": "Select",
+   "label": "Result",
+   "options": "\nOK\nOut of Spec",
+   "read_only": 1,
+   "in_list_view": 1,
+   "columns": 1
+  },
+  {
+   "fieldname": "out_of_spec",
+   "fieldtype": "Data",
+   "label": "Out of Spec",
+   "read_only": 1,
+   "in_list_view": 1,
+   "columns": 2
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Data",
+   "label": "Remarks"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "links": [],
+ "module": "Edcons Foundry",
+ "modified_by": "Administrator",
+ "name": "Sand Mix Batch",
+ "owner": "Administrator",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 0,
+ "istable": 1,
+ "editable_grid": 1,
+ "permissions": []
+}

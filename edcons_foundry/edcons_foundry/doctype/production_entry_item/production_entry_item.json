@@ -1,0 +1,158 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-11-26 18:00:00.000000",
+ "modified": "2026-11-26 18:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "heat",
+  "moulder",
+  "moulder_name",
+  "moulding_type",
+  "customer",
+  "item_code",
+  "item_name",
+  "grade",
+  "book_weight",
+  "pattern",
+  "work_order",
+  "nos",
+  "weight_kg",
+  "rejected_nos",
+  "rejection_reason",
+  "good_nos"
+ ],
+ "fields": [
+  {
+   "fieldname": "heat",
+   "fieldtype": "Link",
+   "label": "Heat No.",
+   "options": "Furnace Heat",
+   "reqd": 1,
+   "in_list_view": 1,
+   "columns": 2
+  },
+  {
+   "fieldname": "moulder",
+   "fieldtype": "Link",
+   "label": "Moulder",
+   "options": "Employee",
+   "in_list_view": 1,
+   "columns": 1
+  },
+  {
+   "fieldname": "moulder_name",
+   "fieldtype": "Data",
+   "label": "Moulder Name",
+   "fetch_from": "moulder.employee_name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "moulding_type",
+   "fieldtype": "Select",
+   "label": "Moulding",
+   "options": "Machine\nHand"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Party",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "label": "Item",
+   "options": "Item",
+   "reqd": 1,
+   "in_list_view": 1,
+   "columns": 2
+  },
+  {
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "label": "Item Name",
+   "fetch_from": "item_code.item_name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "grade",
+   "fieldtype": "Data",
+   "label": "Grade",
+   "fetch_from": "item_code.casting_grade",
+   "fetch_if_empty": 1
+  },
+  {
+   "fieldname": "book_weight",
+   "fieldtype": "Float",
+   "label": "Book Wt (kg)",
+   "fetch_from": "item_code.casting_book_weight",
+   "fetch_if_empty": 1
+  },
+  {
+   "fieldname": "pattern",
+   "fieldtype": "Link",
+   "label": "Pattern",
+   "options": "Pattern",
+   "fetch_from": "item_code.foundry_pattern",
+   "fetch_if_empty": 1
+  },
+  {
+   "fieldname": "work_order",
+   "fieldtype": "Link",
+   "label": "Work Order",
+   "options": "Work Order",
+   "in_list_view": 1,
+   "columns": 2
+  },
+  {
+   "fieldname": "nos",
+   "fieldtype": "Int",
+   "label": "Nos Cast",
+   "reqd": 1,
+   "in_list_view": 1,
+   "columns": 1
+  },
+  {
+   "fieldname": "weight_kg",
+   "fieldtype": "Float",
+   "label": "Weight (kg)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "rejected_nos",
+   "fieldtype": "Int",
+   "label": "Rejected",
+   "in_list_view": 1,
+   "columns": 1
+  },
+  {
+   "fieldname": "rejection_reason",
+   "fieldtype": "Link",
+   "label": "Rejection Reason",
+   "options": "Rejection Reason"
+  },
+  {
+   "fieldname": "good_nos",
+   "fieldtype": "Int",
+   "label": "Good Nos",
+   "read_only": 1,
+   "in_list_view": 1,
+   "columns": 1
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "links": [],
+ "module": "Edcons Foundry",
+ "modified_by": "Administrator",
+ "name": "Production Entry Item",
+ "owner": "Administrator",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 0,
+ "istable": 1,
+ "editable_grid": 1,
+ "permissions": []
+}

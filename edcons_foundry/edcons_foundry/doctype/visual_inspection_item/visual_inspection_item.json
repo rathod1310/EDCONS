@@ -1,0 +1,180 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-11-26 18:00:00.000000",
+ "modified": "2026-11-26 18:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "item_code",
+  "item_name",
+  "work_order",
+  "heat",
+  "qty_checked",
+  "marking_ok",
+  "defects_section",
+  "shrinkage",
+  "cold_shut",
+  "sandfall",
+  "mismatch",
+  "core",
+  "dcb",
+  "keyhole_sand",
+  "fitment_rocking",
+  "frame_height",
+  "other_defects",
+  "result_section",
+  "total_rejected",
+  "ok_qty",
+  "weight_kg",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "label": "Item",
+   "options": "Item",
+   "reqd": 1,
+   "in_list_view": 1,
+   "columns": 2
+  },
+  {
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "label": "Item Name",
+   "fetch_from": "item_code.item_name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "work_order",
+   "fieldtype": "Link",
+   "label": "Work Order",
+   "options": "Work Order",
+   "in_list_view": 1,
+   "columns": 2
+  },
+  {
+   "fieldname": "heat",
+   "fieldtype": "Link",
+   "label": "Heat Code",
+   "options": "Furnace Heat",
+   "in_list_view": 1,
+   "columns": 1
+  },
+  {
+   "fieldname": "qty_checked",
+   "fieldtype": "Int",
+   "label": "Qty Checked",
+   "reqd": 1,
+   "in_list_view": 1,
+   "columns": 1
+  },
+  {
+   "fieldname": "marking_ok",
+   "fieldtype": "Check",
+   "label": "Marking OK",
+   "default": "1"
+  },
+  {
+   "fieldname": "defects_section",
+   "fieldtype": "Section Break",
+   "label": "Rejected by defect"
+  },
+  {
+   "fieldname": "shrinkage",
+   "fieldtype": "Int",
+   "label": "Shrinkage"
+  },
+  {
+   "fieldname": "cold_shut",
+   "fieldtype": "Int",
+   "label": "Cold Shut"
+  },
+  {
+   "fieldname": "sandfall",
+   "fieldtype": "Int",
+   "label": "Sandfall"
+  },
+  {
+   "fieldname": "mismatch",
+   "fieldtype": "Int",
+   "label": "Mismatch"
+  },
+  {
+   "fieldname": "core",
+   "fieldtype": "Int",
+   "label": "Core"
+  },
+  {
+   "fieldname": "dcb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "keyhole_sand",
+   "fieldtype": "Int",
+   "label": "Key Hole Sand"
+  },
+  {
+   "fieldname": "fitment_rocking",
+   "fieldtype": "Int",
+   "label": "Fitment / Rocking"
+  },
+  {
+   "fieldname": "frame_height",
+   "fieldtype": "Int",
+   "label": "Frame Height"
+  },
+  {
+   "fieldname": "other_defects",
+   "fieldtype": "Int",
+   "label": "Other"
+  },
+  {
+   "fieldname": "result_section",
+   "fieldtype": "Section Break",
+   "label": "Result"
+  },
+  {
+   "fieldname": "total_rejected",
+   "fieldtype": "Int",
+   "label": "Rejected",
+   "read_only": 1,
+   "in_list_view": 1,
+   "columns": 1
+  },
+  {
+   "fieldname": "ok_qty",
+   "fieldtype": "Int",
+   "label": "OK Qty",
+   "read_only": 1,
+   "in_list_view": 1,
+   "columns": 1
+  },
+  {
+   "fieldname": "weight_kg",
+   "fieldtype": "Float",
+   "label": "Weight (kg)"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Data",
+   "label": "Remarks",
+   "in_list_view": 1,
+   "columns": 2
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "links": [],
+ "module": "Edcons Foundry",
+ "modified_by": "Administrator",
+ "name": "Visual Inspection Item",
+ "owner": "Administrator",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 0,
+ "istable": 1,
+ "editable_grid": 1,
+ "permissions": []
+}

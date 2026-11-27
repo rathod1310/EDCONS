@@ -1,0 +1,360 @@
+{
+ "charts": [],
+ "content": "[{\"id\": \"ef001\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Shop Floor</b></span>\", \"col\": 12}}, {\"id\": \"ef002\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Shop Floor\", \"col\": 3}}, {\"id\": \"ef003\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Heat Traceability\", \"col\": 3}}, {\"id\": \"ef004\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"New Heat\", \"col\": 3}}, {\"id\": \"ef005\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"New Production Entry\", \"col\": 3}}, {\"id\": \"ef006\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Heats Today\", \"col\": 3}}, {\"id\": \"ef007\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Castings Poured Today\", \"col\": 3}}, {\"id\": \"ef008\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Castings Rejected Today\", \"col\": 3}}, {\"id\": \"ef009\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Sand Batches Out of Spec Today\", \"col\": 3}}, {\"id\": \"ef010\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Daily logs by stage</b></span>\", \"col\": 12}}, {\"id\": \"ef011\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Furnace Heat\", \"col\": 3}}, {\"id\": \"ef012\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Sand Mix Log\", \"col\": 3}}, {\"id\": \"ef013\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Production Entry\", \"col\": 3}}, {\"id\": \"ef014\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Shot Blast Log\", \"col\": 3}}, {\"id\": \"ef015\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Finishing Log\", \"col\": 3}}, {\"id\": \"ef016\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Visual Inspection\", \"col\": 3}}, {\"id\": \"ef017\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Load Test Report\", \"col\": 3}}, {\"id\": \"ef018\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Rejection Report\", \"col\": 3}}, {\"id\": \"ef019\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Reports and masters</b></span>\", \"col\": 12}}, {\"id\": \"ef020\", \"type\": \"card\", \"data\": {\"card_name\": \"Melting\", \"col\": 3}}, {\"id\": \"ef021\", \"type\": \"card\", \"data\": {\"card_name\": \"Moulding and Finishing\", \"col\": 3}}, {\"id\": \"ef022\", \"type\": \"card\", \"data\": {\"card_name\": \"Quality and Lab\", \"col\": 3}}, {\"id\": \"ef023\", \"type\": \"card\", \"data\": {\"card_name\": \"Masters and Setup\", \"col\": 3}}]",
+ "creation": "2026-11-26 18:00:00.000000",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "tool",
+ "idx": 0,
+ "indicator_color": "",
+ "is_hidden": 0,
+ "label": "Shop Floor",
+ "links": [
+  {
+   "type": "Card Break",
+   "label": "Melting",
+   "hidden": 0,
+   "is_query_report": 0,
+   "link_count": 3,
+   "onboard": 0
+  },
+  {
+   "type": "Link",
+   "label": "Furnace Heat",
+   "link_to": "Furnace Heat",
+   "link_type": "DocType",
+   "hidden": 0,
+   "is_query_report": 0,
+   "onboard": 0,
+   "dependencies": ""
+  },
+  {
+   "type": "Link",
+   "label": "Furnace",
+   "link_to": "Furnace",
+   "link_type": "DocType",
+   "hidden": 0,
+   "is_query_report": 0,
+   "onboard": 0,
+   "dependencies": ""
+  },
+  {
+   "type": "Link",
+   "label": "Heat Register",
+   "link_to": "Heat Register",
+   "link_type": "Report",
+   "hidden": 0,
+   "is_query_report": 1,
+   "onboard": 0,
+   "dependencies": ""
+  },
+  {
+   "type": "Card Break",
+   "label": "Moulding and Finishing",
+   "hidden": 0,
+   "is_query_report": 0,
+   "link_count": 6,
+   "onboard": 0
+  },
+  {
+   "type": "Link",
+   "label": "Sand Mix Log",
+   "link_to": "Sand Mix Log",
+   "link_type": "DocType",
+   "hidden": 0,
+   "is_query_report": 0,
+   "onboard": 0,
+   "dependencies": ""
+  },
+  {
+   "type": "Link",
+   "label": "Production Entry",
+   "link_to": "Production Entry",
+   "link_type": "DocType",
+   "hidden": 0,
+   "is_query_report": 0,
+   "onboard": 0,
+   "dependencies": ""
+  },
+  {
+   "type": "Link",
+   "label": "Shot Blast Log",
+   "link_to": "Shot Blast Log",
+   "link_type": "DocType",
+   "hidden": 0,
+   "is_query_report": 0,
+   "onboard": 0,
+   "dependencies": ""
+  },
+  {
+   "type": "Link",
+   "label": "Finishing Log",
+   "link_to": "Finishing Log",
+   "link_type": "DocType",
+   "hidden": 0,
+   "is_query_report": 0,
+   "onboard": 0,
+   "dependencies": ""
+  },
+  {
+   "type": "Link",
+   "label": "Work Order",
+   "link_to": "Work Order",
+   "link_type": "DocType",
+   "hidden": 0,
+   "is_query_report": 0,
+   "onboard": 0,
+   "dependencies": ""
+  },
+  {
+   "type": "Link",
+   "label": "Job Card",
+   "link_to": "Job Card",
+   "link_type": "DocType",
+   "hidden": 0,
+   "is_query_report": 0,
+   "onboard": 0,
+   "dependencies": ""
+  },
+  {
+   "type": "Card Break",
+   "label": "Quality and Lab",
+   "hidden": 0,
+   "is_query_report": 0,
+   "link_count": 5,
+   "onboard": 0
+  },
+  {
+   "type": "Link",
+   "label": "Visual Inspection",
+   "link_to": "Visual Inspection",
+   "link_type": "DocType",
+   "hidden": 0,
+   "is_query_report": 0,
+   "onboard": 0,
+   "dependencies": ""
+  },
+  {
+   "type": "Link",
+   "label": "Load Test Report",
+   "link_to": "Load Test Report",
+   "link_type": "DocType",
+   "hidden": 0,
+   "is_query_report": 0,
+   "onboard": 0,
+   "dependencies": ""
+  },
+  {
+   "type": "Link",
+   "label": "Rejection Report",
+   "link_to": "Rejection Report",
+   "link_type": "DocType",
+   "hidden": 0,
+   "is_query_report": 0,
+   "onboard": 0,
+   "dependencies": ""
+  },
+  {
+   "type": "Link",
+   "label": "Rejection Analysis",
+   "link_to": "Rejection Analysis",
+   "link_type": "Report",
+   "hidden": 0,
+   "is_query_report": 1,
+   "onboard": 0,
+   "dependencies": ""
+  },
+  {
+   "type": "Link",
+   "label": "Quality Inspection",
+   "link_to": "Quality Inspection",
+   "link_type": "DocType",
+   "hidden": 0,
+   "is_query_report": 0,
+   "onboard": 0,
+   "dependencies": ""
+  },
+  {
+   "type": "Card Break",
+   "label": "Masters and Setup",
+   "hidden": 0,
+   "is_query_report": 0,
+   "link_count": 4,
+   "onboard": 0
+  },
+  {
+   "type": "Link",
+   "label": "Pattern",
+   "link_to": "Pattern",
+   "link_type": "DocType",
+   "hidden": 0,
+   "is_query_report": 0,
+   "onboard": 0,
+   "dependencies": ""
+  },
+  {
+   "type": "Link",
+   "label": "Rejection Reason",
+   "link_to": "Rejection Reason",
+   "link_type": "DocType",
+   "hidden": 0,
+   "is_query_report": 0,
+   "onboard": 0,
+   "dependencies": ""
+  },
+  {
+   "type": "Link",
+   "label": "Item",
+   "link_to": "Item",
+   "link_type": "DocType",
+   "hidden": 0,
+   "is_query_report": 0,
+   "onboard": 0,
+   "dependencies": ""
+  },
+  {
+   "type": "Link",
+   "label": "Foundry Settings",
+   "link_to": "Foundry Settings",
+   "link_type": "DocType",
+   "hidden": 0,
+   "is_query_report": 0,
+   "onboard": 0,
+   "dependencies": ""
+  }
+ ],
+ "modified": "2026-11-26 18:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Edcons Foundry",
+ "name": "Shop Floor",
+ "number_cards": [
+  {
+   "label": "Heats Today",
+   "number_card_name": "Heats Today"
+  },
+  {
+   "label": "Castings Poured Today",
+   "number_card_name": "Castings Poured Today"
+  },
+  {
+   "label": "Castings Rejected Today",
+   "number_card_name": "Castings Rejected Today"
+  },
+  {
+   "label": "Sand Batches Out of Spec Today",
+   "number_card_name": "Sand Batches Out of Spec Today"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 30.0,
+ "shortcuts": [
+  {
+   "label": "Shop Floor",
+   "link_to": "shop-floor",
+   "type": "Page",
+   "color": "Orange",
+   "doc_view": ""
+  },
+  {
+   "label": "Heat Traceability",
+   "link_to": "heat-trace",
+   "type": "Page",
+   "color": "Blue",
+   "doc_view": ""
+  },
+  {
+   "label": "New Heat",
+   "link_to": "Furnace Heat",
+   "type": "DocType",
+   "color": "Red",
+   "doc_view": "New"
+  },
+  {
+   "label": "New Production Entry",
+   "link_to": "Production Entry",
+   "type": "DocType",
+   "color": "Green",
+   "doc_view": "New"
+  },
+  {
+   "label": "Furnace Heat",
+   "link_to": "Furnace Heat",
+   "type": "DocType",
+   "color": "Grey",
+   "doc_view": "List",
+   "stats_filter": "[[\"Furnace Heat\", \"docstatus\", \"=\", 0, false]]",
+   "format": "{} Draft"
+  },
+  {
+   "label": "Sand Mix Log",
+   "link_to": "Sand Mix Log",
+   "type": "DocType",
+   "color": "Grey",
+   "doc_view": "List",
+   "stats_filter": "[[\"Sand Mix Log\", \"docstatus\", \"=\", 0, false]]",
+   "format": "{} Draft"
+  },
+  {
+   "label": "Production Entry",
+   "link_to": "Production Entry",
+   "type": "DocType",
+   "color": "Grey",
+   "doc_view": "List",
+   "stats_filter": "[[\"Production Entry\", \"docstatus\", \"=\", 0, false]]",
+   "format": "{} Draft"
+  },
+  {
+   "label": "Shot Blast Log",
+   "link_to": "Shot Blast Log",
+   "type": "DocType",
+   "color": "Grey",
+   "doc_view": "List",
+   "stats_filter": "[[\"Shot Blast Log\", \"docstatus\", \"=\", 0, false]]",
+   "format": "{} Draft"
+  },
+  {
+   "label": "Finishing Log",
+   "link_to": "Finishing Log",
+   "type": "DocType",
+   "color": "Grey",
+   "doc_view": "List",
+   "stats_filter": "[[\"Finishing Log\", \"docstatus\", \"=\", 0, false]]",
+   "format": "{} Draft"
+  },
+  {
+   "label": "Visual Inspection",
+   "link_to": "Visual Inspection",
+   "type": "DocType",
+   "color": "Grey",
+   "doc_view": "List",
+   "stats_filter": "[[\"Visual Inspection\", \"docstatus\", \"=\", 0, false]]",
+   "format": "{} Draft"
+  },
+  {
+   "label": "Load Test Report",
+   "link_to": "Load Test Report",
+   "type": "DocType",
+   "color": "Grey",
+   "doc_view": "List",
+   "stats_filter": "[[\"Load Test Report\", \"docstatus\", \"=\", 0, false]]",
+   "format": "{} Draft"
+  },
+  {
+   "label": "Rejection Report",
+   "link_to": "Rejection Report",
+   "type": "DocType",
+   "color": "Grey",
+   "doc_view": "List",
+   "stats_filter": "[[\"Rejection Report\", \"docstatus\", \"=\", 0, false]]",
+   "format": "{} Draft"
+  }
+ ],
+ "title": "Shop Floor"
+}

@@ -1,0 +1,267 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-11-26 18:00:00.000000",
+ "modified": "2026-11-26 18:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "pattern_code",
+  "pattern_details",
+  "item_code",
+  "customer",
+  "ownership",
+  "cb1",
+  "status",
+  "pattern_material",
+  "pattern_weight_kg",
+  "receipt_section",
+  "receiving_date",
+  "receiving_qty",
+  "unit",
+  "cb2",
+  "return_qty",
+  "return_date",
+  "challan_no",
+  "balance_qty",
+  "usage_section",
+  "castings_required",
+  "cb3",
+  "shots_used",
+  "castings_balance",
+  "inspection_section",
+  "inspections",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "pattern_code",
+   "fieldtype": "Data",
+   "label": "Pattern Code",
+   "reqd": 1,
+   "unique": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "pattern_details",
+   "fieldtype": "Data",
+   "label": "Details of Pattern",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "label": "Casting Item",
+   "options": "Item",
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "ownership",
+   "fieldtype": "Select",
+   "label": "Owned By",
+   "options": "Customer\nCompany",
+   "default": "Customer"
+  },
+  {
+   "fieldname": "cb1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nUnder Repair\nReturned\nScrapped",
+   "default": "Active",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "pattern_material",
+   "fieldtype": "Select",
+   "label": "Pattern Material",
+   "options": "Wood\nAluminium\nCast Iron\nResin\nMetal\nOther"
+  },
+  {
+   "fieldname": "pattern_weight_kg",
+   "fieldtype": "Float",
+   "label": "Pattern Weight (kg)"
+  },
+  {
+   "fieldname": "receipt_section",
+   "fieldtype": "Section Break",
+   "label": "Receipt and Return (PR 48)"
+  },
+  {
+   "fieldname": "receiving_date",
+   "fieldtype": "Date",
+   "label": "Receiving Date"
+  },
+  {
+   "fieldname": "receiving_qty",
+   "fieldtype": "Int",
+   "label": "Receiving Qty"
+  },
+  {
+   "fieldname": "unit",
+   "fieldtype": "Data",
+   "label": "Unit",
+   "default": "Set"
+  },
+  {
+   "fieldname": "cb2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "return_qty",
+   "fieldtype": "Int",
+   "label": "Return Qty"
+  },
+  {
+   "fieldname": "return_date",
+   "fieldtype": "Date",
+   "label": "Return Date"
+  },
+  {
+   "fieldname": "challan_no",
+   "fieldtype": "Data",
+   "label": "Challan No."
+  },
+  {
+   "fieldname": "balance_qty",
+   "fieldtype": "Int",
+   "label": "Balance Qty",
+   "read_only": 1
+  },
+  {
+   "fieldname": "usage_section",
+   "fieldtype": "Section Break",
+   "label": "Usage (automatic)"
+  },
+  {
+   "fieldname": "castings_required",
+   "fieldtype": "Int",
+   "label": "Castings Required"
+  },
+  {
+   "fieldname": "cb3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "shots_used",
+   "fieldtype": "Int",
+   "label": "Castings Made (shots)",
+   "read_only": 1,
+   "description": "Sum of submitted Production Entries"
+  },
+  {
+   "fieldname": "castings_balance",
+   "fieldtype": "Int",
+   "label": "Castings Still Required",
+   "read_only": 1
+  },
+  {
+   "fieldname": "inspection_section",
+   "fieldtype": "Section Break",
+   "label": "Inspection of Pattern"
+  },
+  {
+   "fieldname": "inspections",
+   "fieldtype": "Table",
+   "label": "Inspections",
+   "options": "Pattern Inspection"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "links": [
+  {
+   "link_doctype": "Production Entry Item",
+   "link_fieldname": "pattern",
+   "parent_doctype": "Production Entry",
+   "table_fieldname": "items",
+   "is_child_table": 1,
+   "group": "Production"
+  }
+ ],
+ "module": "Edcons Foundry",
+ "modified_by": "Administrator",
+ "name": "Pattern",
+ "owner": "Administrator",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "export": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Foundry Supervisor",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "export": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Quality Manager",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "export": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Foundry Operator",
+   "read": 1,
+   "report": 1,
+   "print": 1
+  },
+  {
+   "role": "Lab Technician",
+   "read": 1,
+   "report": 1,
+   "print": 1
+  },
+  {
+   "role": "Plant Head",
+   "read": 1,
+   "report": 1,
+   "print": 1
+  }
+ ],
+ "autoname": "field:pattern_code",
+ "naming_rule": "By fieldname",
+ "title_field": "pattern_details",
+ "show_title_field_in_link": 0,
+ "search_fields": "item_code,customer,status"
+}

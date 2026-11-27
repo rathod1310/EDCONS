@@ -1,0 +1,156 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-11-26 18:00:00.000000",
+ "modified": "2026-11-26 18:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "furnace_name",
+  "melt_type",
+  "capacity_kg",
+  "cb1",
+  "asset",
+  "is_active",
+  "lining_section",
+  "current_lining_no",
+  "cb2",
+  "heats_on_lining"
+ ],
+ "fields": [
+  {
+   "fieldname": "furnace_name",
+   "fieldtype": "Data",
+   "label": "Furnace Name",
+   "reqd": 1,
+   "unique": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "melt_type",
+   "fieldtype": "Select",
+   "label": "Melt Type",
+   "options": "DI\nCI",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "capacity_kg",
+   "fieldtype": "Float",
+   "label": "Capacity (kg)"
+  },
+  {
+   "fieldname": "cb1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "asset",
+   "fieldtype": "Link",
+   "label": "Asset",
+   "options": "Asset"
+  },
+  {
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Active",
+   "default": "1"
+  },
+  {
+   "fieldname": "lining_section",
+   "fieldtype": "Section Break",
+   "label": "Lining"
+  },
+  {
+   "fieldname": "current_lining_no",
+   "fieldtype": "Int",
+   "label": "Current Lining No.",
+   "default": "1"
+  },
+  {
+   "fieldname": "cb2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "heats_on_lining",
+   "fieldtype": "Int",
+   "label": "Heats on this Lining",
+   "read_only": 1,
+   "description": "Updated when a Furnace Heat is submitted"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "links": [
+  {
+   "link_doctype": "Furnace Heat",
+   "link_fieldname": "furnace",
+   "group": "Melting"
+  }
+ ],
+ "module": "Edcons Foundry",
+ "modified_by": "Administrator",
+ "name": "Furnace",
+ "owner": "Administrator",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "export": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Foundry Supervisor",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "export": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Quality Manager",
+   "read": 1,
+   "report": 1,
+   "print": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "export": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Foundry Operator",
+   "read": 1,
+   "report": 1,
+   "print": 1
+  },
+  {
+   "role": "Lab Technician",
+   "read": 1,
+   "report": 1,
+   "print": 1
+  },
+  {
+   "role": "Plant Head",
+   "read": 1,
+   "report": 1,
+   "print": 1
+  }
+ ],
+ "autoname": "field:furnace_name",
+ "naming_rule": "By fieldname",
+ "search_fields": ""
+}

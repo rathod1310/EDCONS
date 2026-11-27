@@ -1,0 +1,164 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-11-26 18:00:00.000000",
+ "modified": "2026-11-26 18:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "worker",
+  "worker_name",
+  "process",
+  "item_code",
+  "item_name",
+  "work_order",
+  "heat",
+  "received_nos",
+  "finished_nos",
+  "rejected_nos",
+  "rejection_reason",
+  "book_weight",
+  "sample_weights",
+  "actual_weight",
+  "weight_dev_pct",
+  "weight_flag",
+  "finished_kg"
+ ],
+ "fields": [
+  {
+   "fieldname": "worker",
+   "fieldtype": "Link",
+   "label": "Worker",
+   "options": "Employee",
+   "in_list_view": 1,
+   "columns": 1
+  },
+  {
+   "fieldname": "worker_name",
+   "fieldtype": "Data",
+   "label": "Worker Name",
+   "fetch_from": "worker.employee_name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "process",
+   "fieldtype": "Select",
+   "label": "Process",
+   "options": "Grinding\nFettling\nFinishing\nPainting",
+   "default": "Grinding",
+   "in_list_view": 1,
+   "columns": 1
+  },
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "label": "Item",
+   "options": "Item",
+   "reqd": 1,
+   "in_list_view": 1,
+   "columns": 2
+  },
+  {
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "label": "Item Name",
+   "fetch_from": "item_code.item_name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "work_order",
+   "fieldtype": "Link",
+   "label": "Work Order",
+   "options": "Work Order",
+   "in_list_view": 1,
+   "columns": 1
+  },
+  {
+   "fieldname": "heat",
+   "fieldtype": "Link",
+   "label": "Heat No.",
+   "options": "Furnace Heat",
+   "in_list_view": 1,
+   "columns": 1
+  },
+  {
+   "fieldname": "received_nos",
+   "fieldtype": "Int",
+   "label": "Job Qty"
+  },
+  {
+   "fieldname": "finished_nos",
+   "fieldtype": "Int",
+   "label": "Finished",
+   "reqd": 1,
+   "in_list_view": 1,
+   "columns": 1
+  },
+  {
+   "fieldname": "rejected_nos",
+   "fieldtype": "Int",
+   "label": "Rej",
+   "in_list_view": 1,
+   "columns": 1
+  },
+  {
+   "fieldname": "rejection_reason",
+   "fieldtype": "Link",
+   "label": "Rejection Reason",
+   "options": "Rejection Reason"
+  },
+  {
+   "fieldname": "book_weight",
+   "fieldtype": "Float",
+   "label": "Book Wt (kg)",
+   "fetch_from": "item_code.casting_book_weight",
+   "fetch_if_empty": 1
+  },
+  {
+   "fieldname": "sample_weights",
+   "fieldtype": "Data",
+   "label": "Casting Weights (PR 19)",
+   "description": "Type weights separated by commas, e.g. 12.4, 12.6, 12.5"
+  },
+  {
+   "fieldname": "actual_weight",
+   "fieldtype": "Float",
+   "label": "Avg Casting Wt (kg)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "weight_dev_pct",
+   "fieldtype": "Float",
+   "label": "Deviation %",
+   "read_only": 1
+  },
+  {
+   "fieldname": "weight_flag",
+   "fieldtype": "Select",
+   "label": "Weight",
+   "options": "\nOK\nOverweight\nUnderweight",
+   "read_only": 1,
+   "in_list_view": 1,
+   "columns": 1
+  },
+  {
+   "fieldname": "finished_kg",
+   "fieldtype": "Float",
+   "label": "Finished kg",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "links": [],
+ "module": "Edcons Foundry",
+ "modified_by": "Administrator",
+ "name": "Finishing Log Item",
+ "owner": "Administrator",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 0,
+ "istable": 1,
+ "editable_grid": 1,
+ "permissions": []
+}

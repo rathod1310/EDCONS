@@ -1,0 +1,108 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-11-26 18:00:00.000000",
+ "modified": "2026-11-26 18:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "item_code",
+  "item_name",
+  "work_order",
+  "heat",
+  "std_weight",
+  "cycles",
+  "nos",
+  "rejected_nos",
+  "rejection_reason",
+  "weight_kg"
+ ],
+ "fields": [
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "label": "Item",
+   "options": "Item",
+   "reqd": 1,
+   "in_list_view": 1,
+   "columns": 3
+  },
+  {
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "label": "Item Name",
+   "fetch_from": "item_code.item_name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "work_order",
+   "fieldtype": "Link",
+   "label": "Work Order",
+   "options": "Work Order",
+   "in_list_view": 1,
+   "columns": 2
+  },
+  {
+   "fieldname": "heat",
+   "fieldtype": "Link",
+   "label": "Heat No.",
+   "options": "Furnace Heat",
+   "in_list_view": 1,
+   "columns": 2
+  },
+  {
+   "fieldname": "std_weight",
+   "fieldtype": "Float",
+   "label": "Std Wt (kg)",
+   "fetch_from": "item_code.casting_book_weight",
+   "fetch_if_empty": 1
+  },
+  {
+   "fieldname": "cycles",
+   "fieldtype": "Int",
+   "label": "Cycles"
+  },
+  {
+   "fieldname": "nos",
+   "fieldtype": "Int",
+   "label": "Nos",
+   "reqd": 1,
+   "in_list_view": 1,
+   "columns": 1
+  },
+  {
+   "fieldname": "rejected_nos",
+   "fieldtype": "Int",
+   "label": "Rej",
+   "in_list_view": 1,
+   "columns": 1
+  },
+  {
+   "fieldname": "rejection_reason",
+   "fieldtype": "Link",
+   "label": "Rejection Reason",
+   "options": "Rejection Reason"
+  },
+  {
+   "fieldname": "weight_kg",
+   "fieldtype": "Float",
+   "label": "Weight (kg)",
+   "read_only": 1,
+   "in_list_view": 1,
+   "columns": 1
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "links": [],
+ "module": "Edcons Foundry",
+ "modified_by": "Administrator",
+ "name": "Shot Blast Item",
+ "owner": "Administrator",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 0,
+ "istable": 1,
+ "editable_grid": 1,
+ "permissions": []
+}
